@@ -9,39 +9,45 @@ Practice and demonstrate fundamental SQL analytics skills (SELECT, WHERE, GROUP 
 on a real-world financial dataset, and communicate findings.
 
 ## Dataset
-**Name:** Financial Statements of Major Companies (2009–2023)
-**Source:** Kaggle
-**URL:** https://www.kaggle.com/datasets/rish59/financial-statements-of-major-companies2009-2023
-**Format:** CSV
-**Size:** [approximate row count, e.g. "~2,000 rows across 50 companies"]
-**Downloaded:** 2026-05-30
+
+- **Name:** Financial Statements of Major Companies (2009–2023)
+- **Source:** Kaggle
+- **URL:** https://www.kaggle.com/datasets/rish59/financial-statements-of-major-companies2009-2023
+- **Format:** CSV
+- **Size:** ~2,000 rows across 50 companies (to verify on load)
+- **Downloaded:** 2026-05-30
 
 ## Tools
+
 - PostgreSQL (local)
 - DBeaver (SQL client)
 - Git/GitHub (version control & hosting)
 
-## Business questions (draft - to refine next week)
-- Revenue, Profitability & Growth
-Q1. Total annual revenue per company - one row per company per year.
-Q2. Year‑over‑year revenue growth for each company - compare revenue this year vs last year.
-Q3. Average net income per company across all years - long‑term profitability.
-Q4. Total revenue per industry per year - industry‑level performance.
-Q5. Top 5 companies by revenue in each year - ranking within each year.
+## Business questions (draft — to refine next week)
 
-- Margins, Ratios & Efficiency
-Q6. Average profit margin per company - net income ÷ revenue.
-Q7. Operating expenses as a percentage of revenue per company per year - cost efficiency.
-Q8. Total assets per company per year - balance sheet scale.
-Q9. Debt‑to‑equity ratio per company per year - leverage analysis.
-Q10.Companies with improving profit margins over time - trend detection.
+### Revenue, Profitability & Growth
 
-- Multi‑Group, Multi‑Metric, Real‑Business Queries
-Q11. Revenue, net income, and total assets per company per year - multi‑metric reporting.
-Q12. Industry‑level average revenue, net income, and margin - benchmarking.
-Q13. Companies with negative net income in any year - loss‑making identification.
-Q14. Total revenue per country per year - geographic performance.
-Q15. Top 3 industries by total revenue each year - industry ranking.
+1. Total annual revenue per company — one row per company per year
+2. Year-over-year revenue growth for each company — compare revenue this year vs last year
+3. Average net income per company across all years — long-term profitability
+4. Total revenue per industry per year — industry-level performance
+5. Top 5 companies by revenue in each year — ranking within each year
+
+### Margins, Ratios & Efficiency
+
+6. Average profit margin per company — net income ÷ revenue
+7. Operating expenses as a percentage of revenue per company per year — cost efficiency
+8. Total assets per company per year — balance sheet scale
+9. Debt-to-equity ratio per company per year — leverage analysis
+10. Companies with improving profit margins over time — trend detection
+
+### Multi-Group, Multi-Metric, Real-Business Queries
+
+11. Revenue, net income, and total assets per company per year — multi-metric reporting
+12. Industry-level average revenue, net income, and margin — benchmarking
+13. Companies with negative net income in any year — loss-making identification
+14. Total revenue per country per year — geographic performance
+15. Top 3 industries by total revenue each year — industry ranking
 
 ## Deliverables
 - Cleaned dataset loaded into PostgreSQL
