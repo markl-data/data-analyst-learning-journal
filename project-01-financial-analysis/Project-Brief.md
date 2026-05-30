@@ -1,4 +1,4 @@
-# Project 1 — Financial Statements Analysis
+# Project 1 - Financial Statements Analysis
 
 **Status:**  Design Phase
 **Started:** 2026-05-30
