@@ -137,14 +137,14 @@ LIMIT 3;
 -- One row per country.
 select
 	c.country,
-	count(c.customer_id) as total_number_of_customers,
+	count(distinct c.customer_id) as total_number_of_customers,
 	sum(i.amount) as total_revenue,
 	avg(i.amount) as average_invoice_size
 from customers c
 left join invoices i 
       ON c.customer_id = i.customer_id
 group by c.country
-order by total_number_of_customers, total_revenue, average_invoice_size desc;  
+order by total_number_of_customers , total_revenue , average_invoice_size;  
 
 -- C4. Which product category is most popular in each country? (Group by country and category, sum amount.) 
 -- Order by country, then total descending. 
@@ -207,7 +207,7 @@ from customers c
 left join invoices i
 	on c.customer_id = i.customer_id
 where c.country = 'UK'
-group by c.customer_name, c.country
+group by c.customer_name
 order by total_revenue desc
 limit 3;
 

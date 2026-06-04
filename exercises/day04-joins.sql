@@ -44,7 +44,7 @@ select p.category, sum((p.unit_price - p.unit_cost) * i.quantity) as profit_per_
 from products p
 inner join invoices i on p.product_id = i.product_id 
 group by p.category
-order by profit_per_product;
+order by profit_per_product desc;
 
 -- A8. Show customer_name and number of invoices per customer. 
 -- Sort descending. Include only customers with more than 2 invoices.
@@ -69,7 +69,7 @@ select c.customer_name
 from customers c
 left join invoices i on c.customer_id = i.customer_id 
 where i.invoice_id is null
-order by c.customer_name desc;
+order by c.customer_name;
 
 -- B3. Show every product and the total quantity sold. 
 -- Include products that have never been sold.
