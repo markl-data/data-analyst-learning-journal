@@ -24,7 +24,7 @@
 
 ---
 
-## 1. Customer concentration: [your conclusion in 4-6 words]
+## 1. Customer concentration:
 
 - Top customer: **[Manchester Manufacturing]** at €[24,300] = **[17.60]%** of total revenue
 - Top 3 customers generate €[67,300] representing **[48.80]%** of total revenue
@@ -64,22 +64,24 @@
 ## 4. Credit risk
 
 **Largest Unpaid Balances:**
-- |        Customer            | Unpaid Balance (€) |
-- | -------------------------- | ------------------ |
-- | Manchester Manufacturing   |     €[9,600]       |
-- | Galway Garments            |     €[7,350]       |
-- | Lisbon Logistics           |     €[4,200]       |
-- | Paris Patisserie           |     €[1,800]       |
-- | Belfast Bakery             |     €[900]         |
+| Customer                 | Unpaid Balance (€) |
+|------------------------  |------------------- |
+| Manchester Manufacturing |      9,600         |
+| Galway Garments          |      7,350         |
+| Lisbon Logistics         |      4,200         |
+| Paris Patisserie         |      1,800         |
+| Belfast Bakery           |        900         |
+
 
 **Billing % (unpaid as a share of each customer’s own billings):**
-- |        Customer            |     Blling (%)     || Total Billed (€)   ||| Unpaid Balance (€) |
-- | -------------------------- | ------------------ || ------------------ ||| ------------------ |
-- | Galway Garments            |      82.10%        ||     €[8,950]       |||     €[7,350]       |
-- | Paris Patisserie           |      65.20%        ||     €[2,760]       |||     €[1,800]       |
-- | Lisbon Logistics           |      51.20%        ||     €[8,200]       |||     €[4,200]       |
-- | Belfast Bakery             |      48.40%        ||     €[1,860]       |||     €[900]         |
-- | Manchester Manufacturing   |      39.50%        ||     €[24,300]      |||     €[9,600]       |
+| Customer                 | Country  | Total Billed (€) | Unpaid (€) | Billing % |
+|------------------------  |----------|------------------|------------|-----------|
+| Galway Garments          | Ireland  | 8,950            | 7,350      | 82.1%     |
+| Paris Patisserie         | France   | 2,760            | 1,800      | 65.2%     |
+| Lisbon Logistics         | Portugal | 8,200            | 4,200      | 51.2%     |
+| Belfast Bakery           | UK       | 1,860            | 900        | 48.4%     |
+| Manchester Manufacturing | UK       | 24,300           | 9,600      | 39.5%     |
+
 
 
 **Recommendation:**
