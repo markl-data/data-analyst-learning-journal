@@ -23,7 +23,7 @@ GROUP BY status;
 -- Give me a Percentage of Total OVER ()
 
 -- Alternative 
-SELECT status, 
+SELECT  
        COUNT(*) AS invoice_count,
        SUM(amount) AS total_amount,
        ROUND(100.0 * SUM(amount) / (SELECT SUM(amount) FROM invoices), 1) AS pct_of_total
@@ -112,7 +112,7 @@ group by c.country
 order by total_revenue desc;
 
 -- Per industry: same metrics
- select
+select
 	c.industry,
 	count(distinct c.customer_id) as customer_count,
 	avg(i.amount) as total_revenue,
