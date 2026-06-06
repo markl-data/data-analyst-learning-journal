@@ -26,7 +26,7 @@ overdue risk. Deliverable: half-page markdown summary.
 
 > Send me back a short markdown document with your findings, the SQL queries that produced them, and any recommendations. Don't make it long - half a page of insight is more useful to me than five pages of data. - Sarah, CFO"
 
-## How to reproduce
+## How to Reproduce
 
 1. Connect to local PostgreSQL with the `finance_practice` database loaded
 2. Run `analysis.sql` in DBeaver - each block is annotated with the business 
