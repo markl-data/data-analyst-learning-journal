@@ -1,34 +1,34 @@
 # Customer Book Analysis — Findings
 
 **To:** Sarah, CFO  
-**From:** Mark Losty, Junior Data Analyst  
+**From:** Mark, Junior Data Analyst  
 **Date:** 2026-06-06  
-**Period analysed:** 2025-01-15 to 2026-04-30
+**Period Analysed:** 2025-01-15 to 2026-04-30
 
 ---
 
 ## Topline
 
-- **Total customers:** [12]
-- **Total revenue:** €[137,920]
-- **Paid:** [82.70]% • **Outstanding:** [13.60]% • **Overdue:** [3.70]%
+- **Total Customers:** 12
+- **Total Revenue:** €137,920
+- **Paid:** 82.70% • **Outstanding:** 13.60% • **Overdue:** 3.70%
 
 - **Insight:**
-- The customer book is generally healthy, with more than 80% of revenue paid and only 3.7% overdue, but the 13.6% - outstanding warrants monitoring as it represents future credit exposure.
+- The customer book is generally healthy, with more than 80% of revenue paid and only 3.7% overdue, but the outstanding 13.6% warrants monitoring as it represents future credit exposure.
 
 ---
 
-## Headline finding
+## Headline Finding
 
-- The customer book is highly concentrated and carries material credit exposure, with nearly 50% of revenue coming from three customers and over €20k of unpaid balances sitting with just five accounts, several of whom have more than 50% of their own billings outstanding.
+- Half of our revenue depends on three customers, and one of them - Manchester Manufacturing - sits at €9,600 overdue, a single risk that's larger than our total France exposure.
 
 ---
 
 ## 1. Customer concentration:
 
-- Top customer: **[Manchester Manufacturing]** at €[24,300] = **[17.60]%** of total revenue
-- Top 3 customers generate €[67,300] representing **[48.80]%** of total revenue
-- Top 5 customers generate €[92,660] representing **[67.20]%** of total revenue
+- Top customer: **[Manchester Manufacturing]** at €24,300 = **17.60%** of total revenue
+- Top 3 customers generate €67,300 representing **48.80%** of total revenue
+- Top 5 customers generate €92,660 representing **67.20%** of total revenue
 
 **Interpretation:** 
 - The customer book is highly concentrated, with nearly half of all revenue coming from just three customers and over two‑thirds from the top five.
@@ -36,11 +36,11 @@
 
 ## 2. Geographic and industry performance
 
-- Spain is the Standout Market: €[22,800] per customer, almost 2x the global average €[11,493]. 
-- Germany also outperforms, with €[12,800] per customer, slightly above the global benchmark.
-- France and Portugal significantly underperform, with €[2,760] and €[8,200] per customer respectively, well below the global average
-- Automotive is the strongest sector by far: €[22,800] per customer, nearly double the global average.
-- Food is the weakest sector, with only €[2,310] per customer, far below the global benchmark.
+- Spain is the Standout Market: €22,800 per customer, almost 2x the global average €11,493. 
+- Germany also outperforms, with €12,800 per customer, slightly above the global benchmark.
+- France and Portugal significantly underperform, with €2,760 and €8,200 per customer respectively, well below the global average
+- Automotive is the strongest sector by far: €22,800 per customer, nearly double the global average.
+- Food is the weakest sector, with only €2,310 per customer, far below the global benchmark.
 
 **Interpretation:**
 - The customer book shows strong geographic skew, with Spain and Germany driving outsized value relative to their customer counts
@@ -49,8 +49,8 @@
 
 ## 3. Product profitability
 
-- Most profitable product: Software Licence - Annual, generating €[35,000] in margin at €[1,000] profit per unit.
-- Least profitable product: Consulting Hours - Junior, generating only €[3,960] at €[60] profit per unit.
+- Most profitable product: Software Licence - Annual, generating €35,000 in margin at €1,000 profit per unit.
+- Least profitable product: Consulting Hours - Junior, generating only €3,960 at €60 profit per unit.
 - No products show zero sales, the entire product catalogue is active.
 
 **Interpretation:**
@@ -88,6 +88,9 @@
 - The credit team should prioritise immediate follow‑up with Galway Garments and Paris Patisserie, as their unpaid percentages indicate potential liquidity issues.
 - Manchester Manufacturing also warrants attention due to the absolute size of the exposure.
 - A structured credit‑control plan for these three customers would materially reduce risk in the customer book.
+
+**Note:**
+- Manchester Manufacturing remains well within its credit limit (€9,600 unpaid against €120,000 limit), so the action is collections follow-up rather than credit-line review. Galway Garments, by contrast, is approaching limit utilisation and warrants both.
 
 ---
 
