@@ -1,4 +1,4 @@
-# Customer Book Analysis — Findings
+# Customer Book Analysis - Findings
 
 **To:** Sarah, CFO  
 **From:** Mark, Junior Data Analyst  
@@ -13,7 +13,7 @@
 - **Total Revenue:** €137,920
 - **Paid:** 82.70% • **Outstanding:** 13.60% • **Overdue:** 3.70%
 
-- **Insight:**
+**Insight:**
 - The customer book is generally healthy, with more than 80% of revenue paid and only 3.7% overdue, but the outstanding 13.6% warrants monitoring as it represents future credit exposure.
 
 ---
