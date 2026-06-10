@@ -172,8 +172,4 @@ from (
 		from products p
 		join invoices i on i.product_id = p.product_id
 		group by p.category
-) avg_margin;
-
-)
-		
-		
+) avg_margin;	
