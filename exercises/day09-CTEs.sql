@@ -215,3 +215,56 @@ select customer_name, country, customer_revenue, pct_of_country
 from pct_ratio 
 where pct_of_country > 50
 order by pct_of_country desc;
+
+-----------------------------
+-- With Recursive Example
+-----------------------------
+-- WITH RECURSIVE date_series AS (
+    SELECT DATE '2025-01-01' AS day
+    UNION ALL
+    SELECT day + INTERVAL '1 day'
+    FROM date_series
+    WHERE day < DATE '2025-12-31'
+)
+SELECT * FROM date_series;
+
+-----------------------------
+-- CTE - Synthesis 
+-----------------------------
+-- "For each industry, show: number of customers, total revenue, average revenue per customer, 
+-- the industry's percentage of total company revenue, 
+-- and a flag indicating whether the industry has any overdue invoices."
+with industry_stats as (
+	-- per industry customer count & total revenue
+	select 	c.industry,
+			count(distinct c.customer_id) as customer_count,
+			sum(i.amount) as total_revenue
+			from customers c
+			left join invoices i on i.customer_id = c.customer_id
+			group by c.industry
+),
+company_total as (
+	-- company wide total revenue
+	select sum(amount) as total_revenue
+	from invoices
+),
+industry_overdue as (
+	-- industry flag with any overdue invoices
+	select c.industry,
+	case
+		when count(*) > 0 then 1
+		else 0
+		end as has_overdue
+		from customers c
+		join invoices i on i.customer_id = c.customer_id 
+		where i.status = 'overdue'
+		group by c.industry 	
+)
+select 	s.industry, s.customer_count, s.total_revenue,
+		s.total_revenue * 1.0 / s.customer_count as avg_revenue_per_customer,
+		s.total_revenue * 100.0 / ct.total_revenue AS pct_of_company,
+		COALESCE(o.has_overdue, 0) AS has_overdue
+		from industry_stats s
+		cross join company_total ct
+		left join industry_overdue o on o.industry = s.industry 
+		order by pct_of_company desc;
