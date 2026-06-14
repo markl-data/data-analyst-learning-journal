@@ -206,3 +206,86 @@ where r1.rnk = 1
 and r2.rnk = 2
 order by r2.customer_name; 
 
+--------------------------------------------
+-- Window Functions - Aggregate w/o Collapse
+--------------------------------------------
+
+-- Every invoice with the average invoice amount alongside
+SELECT invoice_id, amount,
+       AVG(amount) OVER () AS company_avg,
+       amount - AVG(amount) OVER () AS diff_from_avg
+FROM invoices
+ORDER BY diff_from_avg DESC;
+-- percentage of total/comparison to benchmark pattern.
+
+-- Each customer's invoices with that customer's average alongside
+SELECT customer_id, invoice_id, amount,
+       AVG(amount) OVER (PARTITION BY customer_id) AS customer_avg
+FROM invoices
+ORDER BY customer_id, amount DESC;
+
+-- Running Totals , Order by inside OVER
+-- Running total of revenue, in date order
+SELECT invoice_date, amount,
+       SUM(amount) OVER (ORDER BY invoice_date) AS running_total
+FROM invoices
+ORDER BY invoice_date;
+
+-- Partition by - Running Total per Customer
+-- Running total per customer
+SELECT customer_id, invoice_date, amount,
+       SUM(amount) OVER (PARTITION BY customer_id ORDER BY invoice_date) AS customer_running_total
+FROM invoices
+ORDER BY customer_id, invoice_date;
+-- Pattern Used Commonly - Customer Lifetime Value, Cumulative Revenue, Sales Pipeline Progression
+-- All running Totals.
+
+--------------------------------------------
+-- Aggregate Window Functions - Exercises 
+--------------------------------------------
+
+-- A1. Each invoice with the company average invoice amount alongside, 
+-- and a column showing each invoice's deviation from that average. 
+-- Sort by deviation descending.
+select 	invoice_id, amount,
+		avg(amount) over () as company_avg,
+		amount - avg(amount) over () as diff_from_avg
+from invoices
+order by diff_from_avg desc;
+
+-- A2. Each invoice with its customer's average invoice amount alongside.
+select 	customer_id, invoice_id, amount,
+		avg(amount) over (partition by customer_id) as customer_avg
+from invoices
+order by customer_id , amount desc;
+
+-- A3. Each invoice as a percentage of its customer's total billings. 
+-- (Hint: amount / SUM(amount) OVER (PARTITION BY customer_id).)
+select 	c.customer_name, i.invoice_id, i.amount,
+		round(i.amount / sum(i.amount) over (partition by c.customer_id),2) as pct_of_customer
+from customers c
+join invoices i on i.customer_id = c.customer_id
+order by c.customer_name, pct_of_customer;
+
+-- A4. Running total of company revenue in chronological order.
+select 	invoice_date, amount,
+		sum(amount) over (order by invoice_date) as running_total
+from invoices
+order by invoice_date;
+
+-- A5. Running total of revenue per customer, in chronological order.
+select 	i.invoice_date, c.customer_name, i.amount,
+		sum(i.amount) over (partition by c.customer_id order by i.invoice_date) as running_total_per_customer
+from customers c
+join invoices i on i.customer_id = c.customer_id
+order by c.customer_name, i.invoice_date;
+
+-- A6. Interview-grade: For each invoice, show its amount, its country's total revenue, 
+-- the company's total revenue, and the country's % of company total. 
+-- All in one query, no CTEs.
+select 	c.country, i.invoice_id, i.amount, sum(i.amount) over (partition by c.country) as country_total_revenue,
+		(select sum(amount) from invoices) as company_total_revenue,
+		round(sum(i.amount) over (partition by c.country) * 100.0 / (select sum(amount) from invoices),2) as pct_of_country
+from customers c
+join invoices i on i.customer_id = c.customer_id
+order by c.country, i.invoice_id;
