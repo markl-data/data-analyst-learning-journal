@@ -11,7 +11,7 @@ Adding entries as I notice them throughout the journey.
 - [Note: growth claims in section 2 need confidence calibration for small samples]
 - [Note: add "insufficient data" category to trajectory query]
 
-## Project 1 (Financial Statements Analysis) — TBD
+## Project 1 (Financial Statements Analysis) - TBD
 - [Will populate during Week 4 build]
 
 ## Cross-portfolio
