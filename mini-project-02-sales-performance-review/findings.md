@@ -61,6 +61,10 @@
 - Declining customers tend to cluster in weaker industries (Food, Retail) and in countries with higher unpaid balances (Portugal, France).
 - The pattern suggests a core of reliable, expanding customers and a long tail of stagnating or shrinking accounts.
 
+**Caveat:**
+- Several customers in our dataset have only 2-3 invoices, which makes their 'trajectory' classification dependent on single transactions rather than a true trend. 
+- A customer flagged as 'growing' on the basis of a single recent large invoice should be treated as a watch-item rather than a confirmed pattern."
+
 **Recommendation:** 
 
 - Intervene with:
@@ -74,7 +78,7 @@
 
 - These customers represent the highest ROI for incremental sales effort.
 
-## 2. Product momentum
+## 2. Product Momentum
 
 - “Product performance is uniformly positive across all eight offerings.”
 
@@ -96,7 +100,10 @@
 
     Training Course – Online - €4,050 → €5,400
 
-- Every product shows meaningful late‑period uplift, with several showing very strong acceleration (On‑site Training, Senior Consulting, Annual Software Licence).
+**Caveat:**
+
+- "Within our 35-invoice dataset, every product shows nominal late-period revenue uplift. However, sample sizes per product are thin (typically 2-5 invoices per half-period), and the Day 15 monthly view revealed substantial month-to-month volatility - a single large invoice can distort 'growth' figures by 100% or more. 
+- The directional finding (no product is collapsing) holds, but the specific growth percentages should be treated as indicative rather than statistically robust."
 
 **Recommendation on dropping products:** 
 
@@ -144,7 +151,8 @@
 - Queries available in `analysis.sql`
 
 ## Caveats
-- No payment timestamps → true time‑to‑pay cannot be computed
-- Some customers/products have thin histories, making trends less reliable
+- Some customers and products have only 2-5 invoices in the dataset. 
+- For these, 'trajectory' calculations are dominated by individual transactions rather than sustained patterns. 
+- A larger, longer dataset would be needed for confident growth/decline classifications
 - Seasonal patterns may be exaggerated by missing months or one‑off invoices
 - Revenue concentration increases sensitivity to performance in a few key segments
