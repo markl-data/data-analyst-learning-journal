@@ -65,6 +65,11 @@
 - Several customers in our dataset have only 2-3 invoices, which makes their 'trajectory' classification dependent on single transactions rather than a true trend. 
 - A customer flagged as 'growing' on the basis of a single recent large invoice should be treated as a watch-item rather than a confirmed pattern."
 
+**Insufficient data:**
+- We cannot make a confident trajectory call for all accounts below without more transaction history.
+- All of the companies below contain less than three invoices.
+- Amsterdam Audio BV, Belfast Bakery, Berlin Brewing GmbH, Cork Coffee Co, Edinburgh Electronics, Galway Garments, Lisbon Logistics, London Lighting Group, Madrid Motors SA, Paris Patisserie
+
 **Recommendation:** 
 
 - Intervene with:
