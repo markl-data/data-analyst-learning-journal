@@ -90,54 +90,33 @@ ORDER BY customer_name;
    ============================================================ */
 
 WITH ordered AS (
-    SELECT
-        p.product_id,
-        p.product_name,
-        i.invoice_date,
-        i.amount,
-        ROW_NUMBER() OVER (
-            PARTITION BY p.product_id
-            ORDER BY i.invoice_date
-        ) AS rn,
-        COUNT(*) OVER (
-            PARTITION BY p.product_id
-        ) AS total_invoices
-    FROM products p
-    JOIN invoices i
-        ON i.product_id = p.product_id
+    SELECT c.customer_id, c.customer_name, i.invoice_date, i.amount,
+           ROW_NUMBER() OVER (PARTITION BY c.customer_id ORDER BY i.invoice_date) AS rn,
+           COUNT(*) OVER (PARTITION BY c.customer_id) AS total_invoices
+    FROM customers c
+    JOIN invoices i ON i.customer_id = c.customer_id
 ),
 halves AS (
-    SELECT
-        product_id,
-        product_name,
-        CASE
-            WHEN rn <= total_invoices / 2 THEN 'early'
-            ELSE 'late'
-        END AS period,
-        amount
-    FROM ordered
+    SELECT customer_id, customer_name, total_invoices,
+           CASE WHEN rn <= total_invoices / 2 THEN 'early' ELSE 'late' END AS period,
+           amount FROM ordered
 ),
 summary AS (
-    SELECT
-        product_id,
-        product_name,
-        SUM(CASE WHEN period = 'early' THEN amount END) AS early_revenue,
-        SUM(CASE WHEN period = 'late' THEN amount END) AS late_revenue
+    SELECT customer_id, customer_name, total_invoices,
+           SUM(CASE WHEN period = 'early' THEN amount END) AS early_revenue,
+           SUM(CASE WHEN period = 'late' THEN amount END) AS late_revenue
     FROM halves
-    GROUP BY product_id, product_name
+    GROUP BY customer_id, customer_name, total_invoices
 )
-SELECT
-    product_id,
-    product_name,
-    early_revenue,
-    late_revenue,
-    CASE
-        WHEN late_revenue > early_revenue * 1.20 THEN 'growing'
-        WHEN late_revenue < early_revenue * 0.80 THEN 'declining'
-        ELSE 'flat'
-    END AS trajectory
+SELECT customer_id, customer_name, total_invoices, early_revenue, late_revenue,
+       CASE
+           WHEN total_invoices < 4 THEN 'insufficient data'
+           WHEN late_revenue > early_revenue * 1.20 THEN 'growing'
+           WHEN late_revenue < early_revenue * 0.80 THEN 'declining'
+           ELSE 'flat'
+       END AS trajectory
 FROM summary
-ORDER BY product_name;
+ORDER BY trajectory, customer_name;
 
 
 
