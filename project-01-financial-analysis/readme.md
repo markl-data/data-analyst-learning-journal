@@ -29,21 +29,6 @@ This project analyses the financial statements of major listed companies between
 
 This project will answer three guiding questions:
 
-1. Question 1 - How many companies?
-2. Question 2 - How many years?
-3. Question 3 - What three analytical questions?
-
-Scope decisions:
-- Companies in scope: Top 25 companies by market cap or revenue.  
-- This gives: Enough variety, Enough stability, Enough data completeness, A clean dashboard footprint.
-
-- Years in scope: All 15 years.
-- Using the following: Window functions, Time Intelligence, DAX, Rolling metrics, YoY, MoM, CAGR
-
-- Date of scope decision: 2026-06-22
-
-- Additional Questions
-
 - Question 1 - Cross‑Company Performance
 - “Which companies have grown most consistently over 15 years, and which have declined? What does the bottom‑3 risk profile look like?”
 
@@ -52,6 +37,16 @@ Scope decisions:
 
 - Question 3 — Outlier & Sector Analysis
 - “Which companies are outliers on key metrics, and are these driven by sector‑level patterns or company‑specific factors?”
+
+Scope decisions:
+- Companies in scope: 12 Distinct Companies  
+- This gives: Enough variety, Enough stability, Enough data completeness, A clean dashboard footprint.
+
+- Years in scope: All 15 years.
+- Using the following: Window functions, Time Intelligence, DAX, Rolling metrics, YoY, MoM, CAGR
+
+- Date of scope decision: 2026-06-19
+
 
 ## Methodology
 
