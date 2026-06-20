@@ -26,14 +26,15 @@ This project analyses the financial statements of major listed companies between
 
 ## Headline metrics
 
-- Three (or four) metrics anchor this analysis:
+Four metrics anchor this analysis, each answering a distinct question:
 
-1. **Revenue** - top-line growth signal
-2. **Operating Cash Flow** - 
-3. **Market Cap** - valuation signal
-4. **EPS** - return on equity
+1. **Revenue** - top-line growth signal; "how big is the business?"
+2. **Net Income** - bottom-line profitability; "how much does the business earn?"
+3. **Market Cap** - market valuation signal; "how does the market value the business?"
+4. **Net Profit Margin** - efficiency signal; "how efficiently does revenue convert to profit?"
 
-- Other available metrics in the dataset are used as supporting context but are not the primary analytical lens.
+Supporting metrics (used in specific analyses but not headline):
+- Operating Cash Flow, EPS, Debt/Equity Ratio, ROE, Number of Employees
 
 
 ## Analytical questions
@@ -47,7 +48,9 @@ This project will answer three guiding questions:
 - “How have key financial metrics (revenue, margins, market cap) trended across the dataset? What inflection points are visible (post‑2008, COVID, tech boom, etc.)?”
 
 - Question 3 — Outlier & Sector Analysis
-- “Which companies are outliers on key metrics, and are these driven by sector‑level patterns or company‑specific factors?”
+- "Which companies are outliers on key metrics? Where sector-level comparison is possible (Technology: AAPL, GOOG, MSFT; Electronics: INTC, NVDA), do outliers reflect sector tailwinds or company-specific drivers?"
+
+- Note: Most sectors in this dataset have only one company, so sector-level analysis is focused on Technology (3 companies) and Electronics (2 companies). For other sectors, the analysis treats company performance as company-specific signal.
 
 Scope decisions:
 - Companies in scope: 12 Distinct Companies  

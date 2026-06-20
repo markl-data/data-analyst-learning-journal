@@ -4,3 +4,12 @@
 - and the Title Case populated columns were renamed to snake_case for
 - SQL clarity. The "Debt/Equity Ratio" column was renamed to 
 - "debt_equity_ratio" (slash removed for compatibility).
+
+## Data preparation
+
+- Column names normalised from mixed Title Case to snake_case
+- Empty duplicate columns dropped from initial CSV load
+- Sector taxonomy normalised: original `category` column had inconsistent 
+  casing (Bank/BANK) and mixed abbreviation/full-word conventions. 
+  A clean `sector` column was added with the following mapping: 
+  [your mapping].
