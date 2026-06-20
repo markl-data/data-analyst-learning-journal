@@ -24,6 +24,17 @@ This project analyses the financial statements of major listed companies between
 - `screenshots/` - dashboard hero images
 - `findings.md` - analytical narrative and recommendations
 
+## Headline metrics
+
+- Three (or four) metrics anchor this analysis:
+
+1. **Revenue** - top-line growth signal
+2. **Operating Cash Flow** - 
+3. **Market Cap** - valuation signal
+4. **EPS** - return on equity
+
+- Other available metrics in the dataset are used as supporting context but are not the primary analytical lens.
+
 
 ## Analytical questions
 
