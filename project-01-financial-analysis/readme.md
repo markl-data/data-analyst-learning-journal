@@ -10,7 +10,7 @@ This project analyses the financial statements of major listed companies between
 
 ## Status
 
-🟡 **In progress** - kickoff 22 June 2026, targeted completion ~3 July 2026
+🟡 **In progress** - kickoff 18 June 2026, targeted completion ~3 July 2026
 
 ## File structure
 
