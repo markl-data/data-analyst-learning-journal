@@ -1,7 +1,7 @@
 # Project 1: Financial Statements Analysis
 
-**Author:** Mark
-**Period covered by data:** 2009-2023 (15 years)
+**Author:** Mark<br>  
+**Period covered by data:** 2009-2023 (15 years)<br>  
 **Dataset source:** [Kaggle - Financial Statements of Major Companies 2009-2023](https://www.kaggle.com/datasets/rish59/financial-statements-of-major-companies2009-2023)
 
 ## Project Overview
@@ -42,17 +42,17 @@ Supporting metrics (used in specific analyses but not headline):
 This project will answer three guiding questions:
 
 - Question 1 - Cross‑Company Performance
-- “Which companies have grown most consistently over 15 years, and which have declined? What does the bottom‑3 risk profile look like?”
+“Which companies have grown most consistently over 15 years, and which have declined? What does the bottom‑3 risk profile look like?”
 
 - Question 2 - Cross‑Company Performance
-- “How have key financial metrics (revenue, margins, market cap) trended across the dataset? What inflection points are visible (post‑2008, COVID, tech boom, etc.)?”
+“How have key financial metrics (revenue, margins, market cap) trended across the dataset? What inflection points are visible (post‑2008, COVID, tech boom, etc.)?”
 
 - Question 3 — Outlier & Sector Analysis
-- "Which companies are outliers on key metrics? Where sector-level comparison is possible (Technology: AAPL, GOOG, MSFT; Electronics: INTC, NVDA), do outliers reflect sector tailwinds or company-specific drivers?"
+"Which companies are outliers on key metrics? Where sector-level comparison is possible (Technology: AAPL, GOOG, MSFT; Electronics: INTC, NVDA), do outliers reflect sector tailwinds or company-specific drivers?"
 
 - Note: Most sectors in this dataset have only one company, so sector-level analysis is focused on Technology (3 companies) and Electronics (2 companies). For other sectors, the analysis treats company performance as company-specific signal.
 
-Scope decisions:
+## Scope decisions:
 - Companies in scope: 12 Distinct Companies  
 - This gives: Enough variety, Enough stability, Enough data completeness, A clean dashboard footprint.
 

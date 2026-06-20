@@ -157,30 +157,30 @@ ORDER BY ordinal_position;
 
 -- Step 1 - Result of Column Breakdown - Full Schema
 /*|column_name                        |data_type        |
-|-----------------------------------|-----------------|
-|year                               |integer          |
-|category                           |text             |
-|revenue                            |numeric          |
-|ebitda                             |numeric          |
-|roe                                |numeric          |
-|roa                                |numeric          |
-|roi                                |numeric          |
-|company                            |character varying|
-|market_cap                         |real             |
-|gross_profit                       |real             |
-|net_income                         |real             |
-|earning_per_share                  |real             |
-|share_holder_equity                |real             |
-|cash_flow_from_operating           |real             |
-|cash_flow_from_investing           |real             |
-|cash_flow_from_financial_activities|real             |
-|current_ratio                      |real             |
-|debt_equity_ratio                  |real             |
-|net_profit_margin                  |real             |
-|free_cash_flow_per_share           |real             |
-|return_on_tangible_equity          |real             |
-|number_of_employees                |integer          |
-|inflation_rate                     |real             |*/
+  |-----------------------------------|-----------------|
+  |year                               |integer          |
+  |category                           |text             |
+  |revenue                            |numeric          |
+  |ebitda                             |numeric          |
+  |roe                                |numeric          |
+  |roa                                |numeric          |
+  |roi                                |numeric          |
+  |company                            |character varying|
+  |market_cap                         |real             |
+  |gross_profit                       |real             |
+  |net_income                         |real             |
+  |earning_per_share                  |real             |
+  |share_holder_equity                |real             |
+  |cash_flow_from_operating           |real             |
+  |cash_flow_from_investing           |real             |
+  |cash_flow_from_financial_activities|real             |
+  |current_ratio                      |real             |
+  |debt_equity_ratio                  |real             |
+  |net_profit_margin                  |real             |
+  |free_cash_flow_per_share           |real             |
+  |return_on_tangible_equity          |real             |
+  |number_of_employees                |integer          |
+  |inflation_rate                     |real             |*/
 
 
 -- Step 2 - Sample Values
