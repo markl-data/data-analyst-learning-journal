@@ -239,3 +239,11 @@ Electronics divergence (INTC vs NVDA)
 
     "Power BI model uses a single-table design rather than a star schema, because annual-grain data with one row per company-year doesn't benefit from a separate date dimension. Year is treated as a categorical axis."
 
+### Units Convention
+- Revenue, Net Income, and supporting income statement metrics are stored 
+  in millions of USD
+- Market Cap is stored in billions of USD
+- Aggregate metrics on dashboards convert these to comparable scales 
+  (typically billions or trillions for display)
+- All dashboard cards label units explicitly to prevent misreading
+
