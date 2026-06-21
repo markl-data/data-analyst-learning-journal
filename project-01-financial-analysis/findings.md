@@ -34,7 +34,7 @@
 - AIG and BCS: persistent low-growth/decline rather than collapse
 - Two distinct decline patterns: catastrophic (SHLDQ) vs structural (AIG, BCS)
 
-### Loss-year patterns — the senior distinction
+### Loss-year patterns - the senior distinction
 - Loss years from growth investment: AMZN (3 years, deliberate reinvestment)
 - Loss years from market downturn: NVDA (2009-2010 financial crisis trough)
 - Loss years from structural distress: AIG (5 chronic loss years), BCS (4)
@@ -186,7 +186,56 @@
 
     The collapse of SHLDQ and long grind of AIG/BCS barely move the aggregate mega‑cap tech fully defines the macro shape.
 
-### To investigate on Day 19
-- Compute NVDA's 2009-2022 CAGR for fair tech-sector comparison
-- Time-series patterns: when did each company's growth inflect?
-- Per-sector aggregate trends
+## Question 3: Outliers and Sector Patterns
+
+### Outliers in the Dataset
+
+Statistical thresholds (IQR method) identified 33 upper‑outlier rows and 2 lower‑outlier rows, for a total of 35 outlier observations across the dataset.
+
+Upper outliers are heavily concentrated in four companies:
+
+    AAPL (11 rows)
+    AMZN (6 rows)
+    GOOG (4 rows)
+    MSFT (5 rows)
+    NVDA (1 row - market cap only)
+
+These four mega‑caps (AAPL, AMZN, GOOG, MSFT) account for 26 of the 33 upper outliers → 79% of all upper‑outlier observations, confirming the extreme top‑skew of the dataset.
+
+Lower outliers are extremely rare:
+
+    PCG (2018, 2019) shows severe negative NPM (–40% to –44%), the only rows breaching the lower IQR thresholds.
+    No other company crosses the lower bound for net income or revenue.
+
+Interpretation:
+
+    The dataset is dominated by upper‑tail outliers from mega‑cap tech and platform companies, while lower‑tail outliers are isolated and tied to idiosyncratic distress events (PCG bankruptcy period).
+
+### Technology sector deep-dive (AAPL, GOOG, MSFT)
+
+    All three follow a similar long‑run growth arc, confirming a true sector tailwind rather than isolated company effects.
+
+    YoY patterns (Q3E) show synchronized booms in 2010–2012 and 2020–2021, and synchronized slowdowns in 2016–2017 and 2022 - clear sector‑level signals.
+
+    Margin profiles differ substantially (Q3F): MSFT highest, GOOG mid‑range, AAPL lowest but stable, reflecting software > ads > hardware economics.
+
+    2022 shows a broad correction across all three: revenue slows, margins compress (GOOG most), and market caps fall sharply.
+
+    Conclusion: Tech megacap performance is fundamentally a sector phenomenon, but margin structure and execution quality determine how much each company benefits from the same macro tailwinds.
+
+Electronics divergence (INTC vs NVDA)
+
+    Same sector, opposite outcomes over 13 years - the strongest divergence story in Q3.
+
+    INTC: ~4.6% CAGR, stagnant revenue, declining profitability, and no structural market‑cap expansion (CPU‑centric, missed GPU/AI wave).
+
+    NVDA: ~17.2% CAGR on a fair comparison window, explosive revenue and profit growth, and a market‑cap trajectory from $10B → $1T (GPU/AI megatrend).
+
+    Aggregated as “Electronics,” the sector shows 6.7% CAGR, which completely masks the dramatic intra‑sector divergence.
+
+
+
+## PowerBI - Initial Exploration
+
+    "Power BI model uses a single-table design rather than a star schema, because annual-grain data with one row per company-year doesn't benefit from a separate date dimension. Year is treated as a categorical axis."
+
