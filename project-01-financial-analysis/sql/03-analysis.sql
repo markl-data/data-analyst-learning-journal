@@ -157,11 +157,11 @@ ORDER BY composite_rank;
 -- Most interesting divergences (the real story)
 /*AAPL → High CAGR, lower consistency
 
-    “Strong long‑term performer with noticeable volatility.”
+    “Strong long term performer with noticeable volatility.”
     
 MSFT → Lower CAGR, higher consistency
 
-    “Steady compounder — not the fastest, but very reliable.”
+    “Steady compounder - not the fastest, but very reliable.”
 
 NVDA → High CAGR, slightly lower consistency
 
@@ -252,11 +252,10 @@ Interpretation
 
 -- Years Where Total Revenue Fell
 
-/*There is only one revenue decline in the entire dataset:
-2011 → 2012
-
-    520B → 596B → no decline  
-    Actually, revenue never falls the dataset.
+/*Aggregate revenue never declined year-over-year between 2009-2022. 
+ * The lowest growth year was 2016 (+1.1%). Even in 2020 (COVID), aggregate revenue grew +15.3%, suggesting the dataset
+ * is heavily weighted toward secular growers (tech megacaps) whose growth dominated any cyclical 
+ * or pandemic effects on the smaller/declining companies.".
 
 Interpretation
 
@@ -372,7 +371,7 @@ Interpretation:
 
 Interpretation:
 
-    2020 is a valuation‑led boom, market cap surges faster than fundamentals.
+    2020 is a valuation led boom, market cap surges faster than fundamentals.
 
 2011 - early cycle boom
 
@@ -381,7 +380,7 @@ Interpretation:
 
 Interpretation:
 
-    2011 is a profit‑led boom, driven by post‑crisis recovery.*/
+    2011 is a profit boom, driven by post crisis recovery.*/
 
 
 -- 3. Revenue vs Net Income Divergences (margin compression / expansion)
@@ -444,7 +443,7 @@ Multiple Expansion (market cap outpaces revenue)
     Revenue YoY: +6%
     Market cap YoY: +25.5%
 
-→ Investors re‑rate the portfolio upward.
+→ Investors re rate the portfolio upward.
 2020
 
     Revenue YoY: +15.3%
@@ -550,5 +549,44 @@ WHERE year BETWEEN 2009 AND 2022
 GROUP BY year
 ORDER BY year;
     
-    
+-- Interpretation of Sector Analysis
+-- Sector CAGR Analysis (2009–2022)
+
+/*Overall pattern
+
+The sector level CAGR table shows a highly polarized growth landscape: a handful of sectors deliver explosive, 
+secular growth, while others stagnate or structurally decline. 
+The spread between the top and bottom sectors is extreme from +26% CAGR (Logistics) to –2.5% CAGR (Banking).
+
+Cross Sector Insights
+1. Growth is extremely concentrated
+
+    Logistics + Technology account for almost all long term revenue expansion.
+    These sectors alone explain the 4× aggregate revenue growth from 2009–2022.
+
+2. Declining sectors don’t matter at the aggregate level
+
+    Banking shrinks.
+    SHLDQ (Finance/Retail) collapses.
+    Manufacturing and Food & Beverage barely grow.
+
+Yet aggregate revenue never declines because tech and logistics overwhelm everything else.
+3. The dataset is structurally asymmetric
+
+    Top 2 sectors: +26% and +16% CAGR
+    Bottom 2 sectors: 0% and –2.5% CAGR
+
+This is a winner‑take‑most distribution, not a balanced sector mix.
+4. Electronics shows internal divergence
+
+    NVDA behaves like a tech hyper growth name.
+    INTC behaves like a mature, stagnating incumbent.
+
+This explains the mid single digit sector CAGR.*/
+
+-- Summary
+
+/*    Sector CAGRs reveal a polarized growth landscape:
+    Logistics and Technology are the dominant secular winners, Electronics is mixed, Manufacturing and Food & Beverage are slow‑growth, and Banking is structurally declining.
+    The aggregate story of 2009–2022 is essentially the story of big tech and platform scale compounding overpowering weakness in legacy sectors.*/
     
