@@ -247,3 +247,15 @@ Electronics divergence (INTC vs NVDA)
   (typically billions or trillions for display)
 - All dashboard cards label units explicitly to prevent misreading
 
+### Visualisation methodology
+- Power BI dashboard uses single-table model (no separate date dimension; 
+  annual-grain data doesn't benefit from one)
+- Revenue/income metrics displayed in trillions on aggregate cards, billions 
+  on per-company comparisons (units labelled explicitly to prevent misreading)
+- 2023 excluded from time-series visuals due to partial reporting; included 
+  in per-company analyses where relevant
+- Three headline visuals on Page 1 (Day 20 build):
+  - Company CAGR ranking (Q1 finding)
+  - Aggregate revenue trend 2009-2022 (Q2 finding)  
+  - Total revenue card with explicit trillion units
+
