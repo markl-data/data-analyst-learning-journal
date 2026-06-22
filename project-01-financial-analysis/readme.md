@@ -64,26 +64,57 @@ This project will answer three guiding questions:
 
 ## Methodology
 
-[Will be completed as the project progresses]
+# Headline Metrics
+
+- Revenue, net income, market cap, and NPM computed annually per company. CAGR and YoY growth used for long‑run and consistency analysis.
+
+# CAGR Formula
+- CAGR=(Revenue2022Revenue2009)1/13−1
+
+# Outlier Definition
+
+- 1.5×IQR rule applied separately to revenue, net income, market cap, and NPM.
+
+# Sector Taxonomy
+
+- 9 sectors, mostly single‑company sectors (e.g., Logistics = AMZN). Reflects dataset structure.
+
+# Year Range
+
+- 2009–2022 used for comparability; 2023 excluded as partial.
+- Units
+
+    Revenue & net income: millions
+
+    Market cap: billions
+
+    Aggregates: trillions
+
+# Data Cleaning
+
+- Schema cleanup, column renaming, sector normalisation, and removal of incomplete rows.
 
 
-## Findings summary
+## Findings Summary
 
-[Will be completed at project close]
+- **Amazon was the dominant growth story:** 26.4% CAGR, growing revenue from 
+  $24.5B to $514B adding more revenue in 13 years than Microsoft's entire 
+  2022 revenue.
 
-## Day 17 Progress
+- **Three distinct decline patterns** characterise the dataset's worst 
+  performers: death spiral (Sears, -10.8% CAGR), structural shrinkage 
+  (Barclays, -3.0%), and strategic disposal (AIG, -2.2%)
 
-- Folder structure created
-- Initial README scaffold
-- Data orientation completed (CSV inspected, mental model formed)
-- Data loaded into local PostgreSQL (database: `financial_statements`)
-- Initial exploration queries run; data shape understood
-- Scope decisions made (see Analytical Questions section)
+- **The dataset has bimodal performance distribution** clear winners 
+  (composite rank 2-8) and clear losers (rank 21-24), with little in between
+- **Aggregate revenue never declined year-over-year**, even in COVID 2020 
+  (+15.3%), but this is a function of dataset composition rather than 
+  broader economic resilience.
 
-## Day 18 plan
+- **Twin NPM peaks of 20.2% (2011) and 21.2% (2021)** mask very different 
+  underlying stories: 2011 was broad-based post-crisis recovery; 2021 was 
+  concentrated tech megacap dominance during the pandemic.
 
-- Build out 02-exploration.sql with deeper data quality checks
-- Begin 03-analysis.sql with queries for guiding question 1 (Cross-Company Performance)
 
 ## Tools
 
