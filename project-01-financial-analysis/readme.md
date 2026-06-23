@@ -1,8 +1,10 @@
 # Project 1: Financial Statements Analysis
 
 **Author:** Mark<br>  
-**Period covered by data:** 2009-2023 (15 years)<br>  
+**Period analysed:** 2009-2022 (13 years)
+**Dataset coverage:** 2009-2023 (2023 excluded as partial reporting — only 2 of 12 companies) 
 **Dataset source:** [Kaggle - Financial Statements of Major Companies 2009-2023](https://www.kaggle.com/datasets/rish59/financial-statements-of-major-companies2009-2023)
+
 
 ## Project Overview
 
@@ -10,7 +12,10 @@ This project analyses the financial statements of major listed companies between
 
 ## Status
 
-🟡 **In progress** - kickoff 18 June 2026, targeted completion ~3 July 2026
+🟡 **In progress** — findings document being finalised. Dashboard complete.
+
+→ Full findings: [findings.md] (in progress)
+→ Dashboard Screenshots: see `screenshots/` folder
 
 ## File structure
 
@@ -44,7 +49,7 @@ This project will answer three guiding questions:
 - Question 1 - Cross‑Company Performance
 “Which companies have grown most consistently over 15 years, and which have declined? What does the bottom‑3 risk profile look like?”
 
-- Question 2 - Cross‑Company Performance
+- Question 2 - Time-Series Patterns  
 “How have key financial metrics (revenue, margins, market cap) trended across the dataset? What inflection points are visible (post‑2008, COVID, tech boom, etc.)?”
 
 - Question 3 — Outlier & Sector Analysis
@@ -69,7 +74,7 @@ This project will answer three guiding questions:
 - Revenue, net income, market cap, and NPM computed annually per company. CAGR and YoY growth used for long‑run and consistency analysis.
 
 # CAGR Formula
-- CAGR=(Revenue2022Revenue2009)1/13−1
+- CAGR = (Revenue_2022 / Revenue_2009)^(1/13) - 1
 
 # Outlier Definition
 
