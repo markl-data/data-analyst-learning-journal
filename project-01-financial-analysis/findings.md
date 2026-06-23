@@ -1,13 +1,13 @@
 # Financial Statements Analysis 2009–2022
 
 Author: Mark<br>
-Period: 2009–2022 (15 years; 2023 excluded as partial reporting)<br>
+Period: 2009–2022 (13 years; 2023 excluded as partial reporting)<br>
 Companies: 12 major listed companies across 9 sectors<br>
 Dataset: Kaggle - Financial Statements of Major Companies (2009–2023)<br>
 
 ## Executive Summary
 
-This analysis examines 15 years of financial statements from 12 major listed companies across 9 sectors between 2009 and 2022. Using SQL for analytical computation and Power BI for visualisation, the project evaluates cross‑company performance, long‑run time‑series patterns, and statistical outliers.
+This analysis examines 13 years of financial statements from 12 major listed companies across 9 sectors between 2009 and 2022. Using SQL for analytical computation and Power BI for visualisation, the project evaluates cross‑company performance, long‑run time‑series patterns, and statistical outliers.
 
 The headline finding: A small cluster of mega‑cap technology and logistics companies generated almost all long‑run value creation, while several incumbents structurally declined producing a sharply bimodal performance distribution that sector averages completely obscure.
 
@@ -35,17 +35,39 @@ The headline finding: A small cluster of mega‑cap technology and logistics com
 
 ## Question 1: Cross-Company Performance
 
-- Question: Which companies have grown most consistently over 15 years, and which have declined? What does the bottom‑3 risk profile look like?
+- Question: Which companies have grown most consistently over 13 years, and which have declined? What does the bottom‑3 risk profile look like?
 
-### Combined, these produce a clear three‑tier structure:
+### Composite Performance Ranking
 
-    Top tier (ranks 2–8): AMZN, GOOG, AAPL, PYPL, NVDA
+Performance was measured using two complementary signals:
+- **CAGR** (compound annual growth rate): how fast revenue grew over 2009-2022
+- **Consistency** (% of years with positive year-over-year growth): how 
+  reliably it grew
 
-    Middle tier (ranks 10–18): MSFT, INTC, PCG, MCD
+Combining these into a composite rank (lower = better) produced:
 
-    Bottom tier (ranks 21–24): AIG, BCS, SHLDQ
+| Composite  | Company          | Sector | CAGR  |
+|----------- |----------------- |--------|-------|
+| 2  | AMZN  | Logistics        | 26.4%  | 100%  |
+| 3  | GOOG  | Technology       | 21.0%  | 100%  |
+| 5  | PYPL  | FinTech          | 16.7%  | 100%  |
+| 8  | AAPL  | Technology       | 18.6%  | 84.6% |
+| 10 | MSFT  | Technology       | 9.6%   | 92.9% |
+| 11 | NVDA  | Electronics      | 17.2%  | 78.6% |
+| 15 | INTC  | Electronics      | 4.6%   | 69.2% |
+| 15 | PCG   | Manufacturing    | 3.8%   | 76.9% |
+| 18 | MCD   | Food & Beverage  | 0.1%   | 46.2% |
+| 21 | AIG   | Banking          | -2.2%  | 30.8% |
+| 21 | BCS   | Banking          | -3.0%  | 38.5% |
+| 24 | SHLDQ | Finance          | -10.8% | 0%    |
 
-The ranking shows a small group of secular winners, a modest middle, and a cluster of structural decliners. There is no smooth gradient the dataset is bimodal.
+The composite ranking reveals three distinct performance bands rather than 
+a smooth gradient. AMZN, GOOG, and PYPL achieved perfect consistency alongside strong CAGRs. 
+SHLDQ scored the maximum composite of 24, last in both metrics reflecting a company that declined in every reporting year before filing bankruptcy in 2018.
+
+Notably, NVDA's higher CAGR (17.2%) than MSFT's (9.6%) does not translate into a better composite rank, because NVDA's growth was volatile (78.6% consistency vs MSFT's 92.9%). 
+
+The composite ranking surfaces what a single growth metric hides: consistent compounding matters as much as headline growth rate.
 
 ### Three Distinct Decline Patterns
 
@@ -93,29 +115,13 @@ profile for each is genuinely different: SHLDQ was a business that no longer
 worked, BCS was a healthy business shrunk by external rules, and AIG was a 
 deliberate restructuring.
 
-### Barclays (BCS) - Structural Shrinkage
 
-    Revenue fell 45% (2010–2017).
 
-    4 loss‑making years.
 
-    Cause: post‑crisis UK regulation forcing balance‑sheet reduction.
+### Loss Years: Growth Investment vs Distress
 
-### AIG - Strategic Disposal
-
-    Revenue fell 42% (2009–2020).
-
-    5 loss‑making years.
-
-    Cause: post‑bailout asset sales to repay government support.
-
-These companies share low ranks but represent different risk profiles: terminal decline, regulatory shrinkage, and deliberate downsizing.
-Loss Years: Growth Investment vs Distress
-
-### Loss years fall into four categories:
-
-Six companies had at least one loss-making year during the period. These 
-cluster into four distinct categories with very different implications:
+Six companies had at least one loss-making year during the period. 
+These cluster into four distinct categories with very different implications:
 
 **Loss years from growth investment** (deliberate, strategic):
 - **AMZN:** 3 loss years (2012 and surrounding) - losses from reinvestment in 
@@ -169,43 +175,51 @@ economy.** Selection biases toward survivors and toward extreme cases
 
 ### Aggregate Growth Shape
 
-Aggregate Growth Shape: Total revenue from $392B (2009) to $1,639B (2022) 4.2× multiple. Growth was lumpy, not smooth. Lowest year was 2016 (+1.1%); strongest was 2021 (+25.1%). Aggregate revenue never declined YoY.
-Inflection Points: Walk through the key years and likely drivers:
+Aggregate revenue across the 12 companies grew from $392B in 2009 to $1,639B in 2022 - a 4.2× multiple over 13 years. Growth was discrete rather than smooth, with the strongest years (2021 at +25.1%) reflecting tech megacap 
+acceleration and the weakest (2016 at +1.1%) reflecting broader plateau.
 
-2009-2011: Post-Crisis Recovery
-2017: net income compression from US Tax Cuts and Jobs Act (one-time charges)
-2020 COVID: divergence (revenue +15.3%, net income +9.6%, market cap +50.6%) tech megacap boom offsetting weakness elsewhere
-2021: surge (revenue +25.1%, net income +67.5%)
-2022: market cap correction (-36.2%) while revenue held — valuations contracted before operating performance
+Notably, aggregate revenue never declined year-over-year across the entire period, even through COVID 2020 (+15.3%). This resilience is a function of dataset composition rather than broader economic strength - the secular 
+growers (tech megacaps) overpowered any cyclical weakness elsewhere.
 
-Sector-Level Trends: Reference the sector CAGRs:
+### Inflection Points and Likely Drivers
 
-Logistics 26.4% (AMZN only - sector ≡ company)
-Technology 16.2% (3 companies - real sector analysis)
-Electronics 6.7% (2 companies - masks divergent paths)
-Manufacturing 3.8%, Food & Beverage 0.1%, Banking -2.5% (smaller/declining)
+- **2009-2011:** Post-crisis recovery strongest broad profitability year was 2011 (zero loss-makers, $105B aggregate net income)
+
+- **2017:** Net income compression (-7.7% YoY) likely driven by US Tax Cuts and Jobs Act causing one-time tax charges across major US corporates 
+  while revenue continued growing
+
+- **2020 (COVID):** Striking divergence aggregate revenue +15.3%, aggregate net income +9.6%, market cap +50.6%. Tech megacaps' boom (cloud, 
+  e-commerce, streaming) more than offset weakness elsewhere
+
+- **2021:** Recovery surge across all metrics (revenue +25.1%, net income 
+  +67.5%, market cap +35.9%)
+
+- **2022:** Market cap correction (-36.2%) while revenue held steady (+8.7%) valuations contracted before operating performance, foreshadowing the 
+  tech-sector valuation reset
+
+
+### Sector-Level Trends
+
+Sector CAGRs reveal a polarised growth landscape:
+- Logistics 26.4% (AMZN only - sector ≡ company)
+- Technology 16.2% (3 companies - real sector analysis possible)
+- Electronics 6.7% (2 companies - masks divergent paths between INTC and NVDA)
+- Manufacturing 3.8%, Food & Beverage 0.1%
+- Banking -2.5% (2 companies - both declining)
+
+Sector labels hide major intra-sector divergence, especially in Electronics 
+(see Q3 deep-dive).
 
 ### Loss-Year Clustering
 
-    Logistics (AMZN): 26.4% CAGR
+Loss years cluster in 2012, 2016-17, and 2020-22, but no year shows systemic 
+distress. The "everyone profitable" year was 2011 (zero loss-makers, $105B 
+aggregate net income). 
+COVID 2020 had only 2 loss-makers, reinforcing the secular-growth dominance of the dataset. 
 
-    Technology (AAPL, GOOG, MSFT): 16.2% CAGR
-
-    Electronics (INTC + NVDA): 6.7% CAGR
-
-    Banking (AIG, BCS): –2.5% CAGR
-
-Sector labels hide major intra‑sector divergence especially in Electronics.
-Loss‑Year Clustering
-
-Loss years cluster in 2012, 2016–17, and 2020–22, but no year shows systemic distress. Losses are company‑specific: PCG’s wildfire liabilities, AIG’s disposals, NVDA’s cycle trough, SHLDQ’s collapse.
-Twin NPM Peaks
-
-    2011 (20.2%) - broad‑based recovery
-
-    2021 (21.2%) - concentrated tech megacap dominance
-
-Same headline, different drivers.
+Cluster years reflect individual 
+company troughs PCG's wildfire liabilities, AIG's disposals, NVDA's cycle 
+trough, SHLDQ's collapse rather than systemic economic events.
 
 ### Twin NPM Peaks
 
@@ -235,7 +249,6 @@ Lower outliers are rare and come from PCG (bankruptcy‑related losses) and SHLD
 ### Technology Sector Deep-Dive (AAPL/GOOG/MSFT)
 
 AAPL, GOOG, and MSFT show parallel YoY revenue patterns, confirming a sector tailwind. But margins diverge structurally: MSFT highest, GOOG mid‑range, AAPL lowest but stable. Market‑cap convergence in 2020–21 is followed by a broad 2022 correction.
-Electronics Divergence
 
 INTC and NVDA share a sector but not a trajectory:
 
@@ -285,14 +298,15 @@ The goal is consistency ensuring each company is evaluated within a stable, clea
 
 ### Year Range
 
-2009–2022 used for comparability; 2023 excluded as partial.
-Units
+2009-2022 used for comparability; 2023 excluded as partial reporting (only 
+AMZN and NVDA reported full 2023 figures).
 
-    Revenue & net income: millions
+### Units Convention
 
-    Market cap: billions
-
-    Aggregates: trillions
+- **Revenue and net income:** millions of USD
+- **Market cap:** billions of USD  
+- **Aggregate cards:** trillions of USD (with units labelled explicitly to 
+  prevent misreading)
 
 ### Data Cleaning
 
