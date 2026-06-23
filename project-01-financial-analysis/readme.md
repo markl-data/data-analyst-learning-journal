@@ -12,10 +12,10 @@ This project analyses the financial statements of major listed companies between
 
 ## Status
 
-🟡 **In progress** — findings document being finalised. Dashboard complete.
+🟢 **Complete** as of [date]
 
-→ Full findings: [findings.md] (in progress)
-→ Dashboard Screenshots: see `screenshots/` folder
+→ Full findings: [findings.md](findings.md)  
+→ Dashboard screenshots: see [`screenshots/`](screenshots/) folder
 
 ## File structure
 

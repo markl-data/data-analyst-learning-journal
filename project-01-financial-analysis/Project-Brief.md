@@ -23,23 +23,23 @@ on a real-world financial dataset, and communicate findings.
 - DBeaver (SQL client)
 - Git/GitHub (version control & hosting)
 
-## Business questions (draft — to refine next week)
+## Business Questions
 
 ### Revenue, Profitability & Growth
 
 1. Total annual revenue per company — one row per company per year
-2. Year-over-year revenue growth for each company — compare revenue this year vs last year
-3. Average net income per company across all years — long-term profitability
-4. Total revenue per industry per year — industry-level performance
-5. Top 5 companies by revenue in each year — ranking within each year
+2. Year-over-year revenue growth for each company compare revenue this year vs last year
+3. Average net income per company across all years long-term profitability
+4. Total revenue per industry per year industry-level performance
+5. Top 5 companies by revenue in each year ranking within each year
 
 ### Margins, Ratios & Efficiency
 
-6. Average profit margin per company — net income ÷ revenue
-7. Operating expenses as a percentage of revenue per company per year — cost efficiency
-8. Total assets per company per year — balance sheet scale
-9. Debt-to-equity ratio per company per year — leverage analysis
-10. Companies with improving profit margins over time — trend detection
+6. Average profit margin per company net income ÷ revenue
+7. Operating expenses as a percentage of revenue per company per year cost efficiency
+8. Total assets per company per year balance sheet scale
+9. Debt-to-equity ratio per company per year leverage analysis
+10. Companies with improving profit margins over time trend detection
 
 ### Multi-Group, Multi-Metric, Real-Business Queries
 
