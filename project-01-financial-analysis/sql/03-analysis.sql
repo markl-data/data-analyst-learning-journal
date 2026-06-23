@@ -1035,12 +1035,3 @@ ORDER BY year, company;
        INTC vs NVDA is a textbook divergence: CPUs plateau, GPUs dominate.
        NVDA rides structural megatrends; INTC misses them.
 */
-
-
-SELECT year, COUNT(DISTINCT company), SUM(market_cap) AS total_mc
-FROM financials_raw
-WHERE year IN (2022, 2023)
-GROUP BY year;
-
-
-
