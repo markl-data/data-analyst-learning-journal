@@ -47,11 +47,11 @@ Performance was measured using two complementary signals:
 Combining these into a composite rank (lower = better) produced:
 
 | Composite  | Company          | Sector | CAGR  |
-|----------- |----------------- |--------|-------|
-| 2  | AMZN  | Logistics        | 26.4%  | 100%  |
-| 3  | GOOG  | Technology       | 21.0%  | 100%  |
-| 5  | PYPL  | FinTech          | 16.7%  | 100%  |
-| 8  | AAPL  | Technology       | 18.6%  | 84.6% |
+|------------|----------------- |--------|-------|
+| 2 | AMZN   | Logistics        | 26.4%  | 100%  |
+| 3 | GOOG   | Technology       | 21.0%  | 100%  |
+| 5 | PYPL   | FinTech          | 16.7%  | 100%  |
+| 8 | AAPL   | Technology       | 18.6%  | 84.6% |
 | 10 | MSFT  | Technology       | 9.6%   | 92.9% |
 | 11 | NVDA  | Electronics      | 17.2%  | 78.6% |
 | 15 | INTC  | Electronics      | 4.6%   | 69.2% |
@@ -84,7 +84,7 @@ point entirely.
 The Sears story is the textbook case of retail disruption. Amazon and Walmart 
 squeezed traditional department stores into extinction over the dataset period, 
 and Sears was the most prominent casualty. With losses in 78% of reporting 
-years, the company wasn't slowing — it was actively dying throughout the data.
+years, the company wasn't slowing it was actively dying throughout the data.
 
 **Barclays (BCS) - Structural Shrinkage**
 - Revenue: $49.0B (2010 peak) → $27.2B (2017 trough)
@@ -93,7 +93,7 @@ years, the company wasn't slowing — it was actively dying throughout the data.
 
 Unlike Sears, Barclays peaked *after* the 2008 crisis (in 2010, briefly buoyed 
 by recovery) before declining steadily. The cause was UK regulatory pressure 
-post-2008 — ring-fencing requirements and capital constraints forced sale or 
+post-2008, ring-fencing requirements and capital constraints forced sale or 
 wind-down of business lines. Recovery began post-2017 once the regulatory 
 shrinkage was complete.
 
@@ -249,12 +249,6 @@ Lower outliers are rare and come from PCG (bankruptcy‑related losses) and SHLD
 ### Technology Sector Deep-Dive (AAPL/GOOG/MSFT)
 
 AAPL, GOOG, and MSFT show parallel YoY revenue patterns, confirming a sector tailwind. But margins diverge structurally: MSFT highest, GOOG mid‑range, AAPL lowest but stable. Market‑cap convergence in 2020–21 is followed by a broad 2022 correction.
-
-INTC and NVDA share a sector but not a trajectory:
-
-    INTC: ~4.6% CAGR, stagnant revenue, declining profitability.
-
-    NVDA: ~17% CAGR, explosive growth, $10B → $1T market cap.
 
 Market‑cap behaviour reinforces the pattern: all three expand sharply through the 2010s, converge in 2020–2021, and then correct in 2022. 
 The sector’s long‑run dominance is clear, but the internal variation highlights a key analytical point: the tech sector rises together, but each company captures the tailwind differently.
