@@ -41,8 +41,7 @@ The headline finding: A small cluster of mega‑cap technology and logistics com
 
 Performance was measured using two complementary signals:
 - **CAGR** (compound annual growth rate): how fast revenue grew over 2009-2022
-- **Consistency** (% of years with positive year-over-year growth): how 
-  reliably it grew
+- **Consistency** (% of years with positive year-over-year growth): how reliably it grew
 
 Combining these into a composite rank (lower = better) produced:
 
