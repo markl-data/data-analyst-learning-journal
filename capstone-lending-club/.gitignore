@@ -1,0 +1,8 @@
+# Ignore all large data files
+data/*.csv
+data/*.csv.gz
+data/*.rar
+data/*.zip
+
+# But do commit a README explaining what should be here
+!data/README.md
