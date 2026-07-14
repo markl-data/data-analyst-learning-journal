@@ -1,26 +1,63 @@
-# Data-Analyst-Learning-Journal
+# Mark  — Data Analyst Portfolio
 
-Public learning log for my transition from Accountancy & Finance to Data Analytics.
+Domain-focused data analyst combining a finance and accountancy background 
+with SQL, Python, and Power BI. This repository contains my analytical 
+projects and the learning journey behind them.
 
-## About Me
-Qualified Accounting Technician & Accountancy & Finance Graduate from TUDublin.
-Graduate of National College of Ireland in Science in Computing.
-Working towards becoming an Financial Data Analyst.
+**Currently in transition** from Accountancy & Finance to Financial Data 
+Analyst roles.
 
-## My Stack (in progress)
-- **SQL** — PostgreSQL, window functions, CTEs
-- **Python** — pandas, matplotlib, Jupyter
-- **Power BI** — Power Query, DAX, dashboard design
-- **Excel** — advanced functions, Power Query
+**→ Start here: [PORTFOLIO.md](./PORTFOLIO.md)**
+
+---
+
+## Background
+
+- **Qualified Accounting Technician** — professional accountancy qualification
+- **BA Accountancy & Finance**, TU Dublin — degree-level finance foundation
+- **BSc Computing**, National College of Ireland — technical education
+- **Domain expertise:** credit risk, underwriting, financial statement analysis
+
+The finance-to-data transition means I bring domain fluency to analytical 
+work — not just tools, but understanding of what the numbers mean 
+in a business context.
+
+---
+
+## Technical Stack
+
+**In production use across portfolio work:**
+- **SQL / PostgreSQL** — window functions, CTEs, complex aggregations, 
+  database design
+- **Python (pandas, matplotlib)** — analytical workflows, data cleaning, 
+  visualisation
+- **Power BI** — multi-page dashboards, DAX measures, star schema design
+- **Excel** — advanced functions, Power Query, pivot analysis
+
+---
+
+## Repository Structure
+
+This is a **monorepo** — a single repository containing all projects and 
+learning artefacts. Each project below is self-contained with its own 
+README, source files, and outputs.
+
+---
 
 ## Roadmap
-Following a 16-week structured plan: SQL → Excel → Power BI → Python → Capstone → PL-300 cert → Job hunt.
 
-## Daily notes
-See [`daily-notes/`](./daily-notes/) for my running log.
+Following a structured 16-week transition plan:
 
-## Projects
-Each portfolio project will live in its own repo, linked from my [GitHub profile](https://github.com/markl-data).
+- **Phase 1** (Weeks 1-4): SQL, Excel, Power BI foundations — ✅ Complete
+- **Phase 2** (Weeks 5-8): First portfolio project (Financial Statements 
+  Analysis) — ✅ Complete
+- **Phase 3** (Weeks 9-11): Python + pandas + matplotlib — 🟡 In progress
+- **Phase 4** (Weeks 12-16): Capstone (Lending Club) + applications — 
+  ⏳ Upcoming
+
+---
 
 ## Connect
-- [LinkedIn](https://linkedin.com/in/TBA)
+
+- **GitHub:** [markl-data](https://github.com/markl-data)
+- **LinkedIn:** [TBA]
